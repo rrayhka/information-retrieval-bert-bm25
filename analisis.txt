@@ -1,0 +1,44 @@
+['80/pid.b/2014/pn.spg', # Nomor Putusan
+ 'pengadilan negeri sampang', # Nama Pengadilan
+ 'tingkat pertama,', # Tingkat Kasus
+ 'durrahman al. p. sulaiman;', # Nama Terdakwa
+ 'pasal 351 ayat (1) kuhp', # Melanggar UU (Tuntutan)
+ 'penjara selama 8 (delapan) bulan;', # Tuntutan Hukuman
+ 'sayyad effendi', # Nama Saksi
+ 'sitina', # Nama Saksi
+ '21 januari 2014', # Tanggal Kejadian
+ 'dakwaan tunggal', # Jenis Dakwaan
+ 'pasal 351 ayat (1) kuhp', # Melanggar UU (Dakwaan)
+ 'pasal 351 ayat (1) kuhp', # Melanggar UU (Pertimbangan Hukum)
+ 'menjatuhkan pidana terhadap terdakwa', # Jenis-Amar
+ 'penjara selama 5 (lima) bulan;', # Putusan Hukuman
+ '22 mei 2014', # Tanggal Putusan
+ 'satyawati yun irianti, sh., mhum,', # Hakim Ketua
+ 'heru setiyadi sh.,', # Hakim Anggota
+ 'moh. ismail gunawan, sh.,', # Hakim Anggota
+ 'oleptaufikurrahman, sh.,', # Panitera
+ 'heronika setiawaty, sh.,'] # Jaksa
+
+
+['247/pid.sus/2014/pn.gpr.', # Nomor Putusan
+ 'pengadilan negeri kabupaten kediri,', # Nama Pengadilan
+ 'tingkat pertama', # Tingkat Kasus
+ 'urip hidayat als. ondo bin musai.', # Nama Terdakwa
+ 'dengan sengaja tidak memiliki keahlian dan kewenangan menyimpan sediaan farmasi yang tidak memenuhi standar dan d2rektori putusan mahkamah agung republik indonesia atau persyaratan keamanan, khasiat atau kemanfaatan dan mutu', # Jenis Perkara
+ 'pasal 197 uu ri. no.36 tahun 2009 tentang kesehatan,', # Melanggar UU (Tuntutan)
+ 'penjara selama : 3 (tiga) tahun 6 (enam) bulan,', # Tuntutan Hukuman
+ 'denda sebesar rp1000000 (satu juta rupiah), apabila tidak dibayar maka diganti dengan kurungan selama 3 (tiga) bulan', # Tuntutan Hukuman
+ 'sulistyawan', # Nama Saksi
+ 'didik triatmaji.', # Nama Saksi
+ 'dakwaan alternatif', # Jenis Dakwaan
+ 'pasal 197 uu ri. no.36 tahun 2009 tentang kesehatan,', # Melanggar UU (Dakwaan)
+ 'pasal 197 uu ri. no.36 tahun 2009 tentang kesehatan,', # Melanggar UU (Pertimbangan Hukum)
+ 'menjatuhkan pidana kepada terdakwa', # Jenis Amar
+ 'penjara selama : 2 (dua) tahun dan 6 (enam) bulan,', # Putusan Hukuman
+ 'denda rp1000000 (satu juta rupiah), apabila denda tersebut tidak dibayar diganti dengan kurungan selama 1 (satu) bulan', # Putusan Hukuman
+ '12 mei 2014,', # Tanggal Putusan
+ 'yunizar kilat daya, sh.mh.', # Hakim Ketua
+ 'ade sumitra hs., sh.mhum.', # Hakim Anggota
+ 'tiwi k, sh.mhum.,', # Hakim Anggota
+ 'h. masmunif irfan, sh.', # Panitera
+ 'm. ashlah f., sh.'] # Jaksa

@@ -6,7 +6,6 @@ import torch
 import pickle
 import json
 
-# Load data and models
 with open('bert_embeddings.pkl', 'rb') as f:
     df = pickle.load(f)
 
@@ -18,7 +17,6 @@ with open('data/json/all_meta.json') as f:
 meta_df = pd.DataFrame(meta_data)
 df = pd.merge(df, meta_df, on='id')
 
-# Initialize Flask app
 app = Flask(__name__)
 
 @app.route('/')
@@ -34,7 +32,6 @@ def query():
         best_idx = scores.argmax()
         best_doc = df.iloc[best_idx]
         
-        # Prepare result
         result = {
             'id': best_doc['id'],
             'text': best_doc['text'],

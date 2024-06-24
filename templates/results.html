@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Search Result</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Document ID: {{ result.id }}</h5>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><strong>Verdict:</strong> {{ result.verdict }}</li>
+                    <li class="list-group-item"><strong>Indictment:</strong> {{ result.indictment }}</li>
+                    <li class="list-group-item"><strong>Lawyer:</strong> {{ result.lawyer }}</li>
+                    <li class="list-group-item"><strong>Owner:</strong> {{ result.owner }}</li>
+                </ul>
+                <p class="card-text">{{ result.text }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

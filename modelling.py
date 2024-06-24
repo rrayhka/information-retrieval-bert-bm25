@@ -41,15 +41,6 @@ def extract_entities(text, tags):
         entities.append(' '.join(current_entity))
     return entities
 df['entities'] = df.apply(lambda row: extract_entities(row['text'], row['text-tags']), axis=1)
-train_ids = pd.read_csv('data/raw/train.ids.csv')['id'].tolist()
-val_ids = pd.read_csv('data/raw/val.ids.csv')['id'].tolist()
-test_ids = pd.read_csv('data/raw/test.ids.csv')['id'].tolist()
-train_data = df[df['id'].isin(train_ids)]
-val_data = df[df['id'].isin(val_ids)]
-test_data = df[df['id'].isin(test_ids)]
-train_data.reset_index(drop=True, inplace=True)
-val_data.reset_index(drop=True, inplace=True)
-test_data.reset_index(drop=True, inplace=True)
 tokenizer = BertTokenizer.from_pretrained('indobert-base-p1')
 model = BertModel.from_pretrained('indobert-base-p1')
 def bert_encode(texts, batch_size=32, max_length=512):

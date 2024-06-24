@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Advanced Search</h1>
+        <form method="POST" action="/query">
+            <div class="form-group">
+                <label for="query">Query</label>
+                <input type="text" class="form-control" id="query" name="query" placeholder="Enter your search query" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        {% if error %}
+            <div class="alert alert-danger mt-3">{{ error }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

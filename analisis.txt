@@ -17,7 +17,8 @@
  'heru setiyadi sh.,', # Hakim Anggota
  'moh. ismail gunawan, sh.,', # Hakim Anggota
  'oleptaufikurrahman, sh.,', # Panitera
- 'heronika setiawaty, sh.,'] # Jaksa
+ 'heronika setiawaty, sh.,' # Jaksa
+ ] 
 
 
 ['247/pid.sus/2014/pn.gpr.', # Nomor Putusan
@@ -41,4 +42,5 @@
  'ade sumitra hs., sh.mhum.', # Hakim Anggota
  'tiwi k, sh.mhum.,', # Hakim Anggota
  'h. masmunif irfan, sh.', # Panitera
- 'm. ashlah f., sh.'] # Jaksa
+ 'm. ashlah f., sh.' # Jaksa
+ ] 

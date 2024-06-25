@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Details</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Document Details</h1>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Document ID: {{ document['id'] }}</h5>
-                <p class="card-text">
-                    <strong>Verdict:</strong> {{ meta['verdict'] }}<br>
-                    <strong>Indictment:</strong> {{ meta['indictment'] }}<br>
-                    <strong>Lawyer:</strong> {{ meta['lawyer'] }}<br>
-                    <strong>Owner:</strong> {{ meta['owner'] }}
-                </p>
-                <p class="card-text">{{ ' '.join(document['text']) }}</p>
-                <h5>Entities</h5>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-3xl font-bold mb-6">Document Details</h1>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Document ID: {{ document.id }}</h2>
+            <p class="text-gray-700 mb-4">{{ document.text }}</p>
+            <div class="border-t border-gray-200 mt-4 pt-4">
+                <h3 class="text-lg font-semibold mb-2">Meta Information</h3>
                 <ul>
-                    {% for entity in document['entities'] %}
-                        <li>{{ entity }}</li>
+                    <li class="mb-2"><strong>Verdict:</strong> {{ meta.verdict }}</li>
+                    <li class="mb-2"><strong>Indictment:</strong> {{ meta.indictment }}</li>
+                    <li class="mb-2"><strong>Lawyer:</strong> {{ meta.lawyer }}</li>
+                    <li class="mb-2"><strong>Owner:</strong> {{ meta.owner }}</li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-200 mt-4 pt-4">
+                <h3 class="text-lg font-semibold mb-2">Entities</h3>
+                <ul class="list-disc list-inside">
+                    {% for entity in document.entities %}
+                    <li class="mb-1">{{ entity }}</li>
                     {% endfor %}
                 </ul>
-                <a href="/" class="btn btn-primary">Back to Search</a>
             </div>
+            <a href="/" class="mt-6 inline-block bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Back to
+                Search</a>
         </div>
     </div>
 </body>
+
 </html>

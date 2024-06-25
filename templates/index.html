@@ -2,22 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced Search</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <div class="container mt-5">
-        <h1 class="mb-4">Advanced Search</h1>
-        <form method="POST" action="/query">
-            <div class="form-group">
-                <label for="query">Query</label>
-                <input type="text" class="form-control" id="query" name="query" placeholder="Enter your search query" required>
+<body class="bg-gray-100">
+    <div class="container mx-auto mt-10">
+        <h1 class="text-4xl font-bold mb-8">Advanced Search</h1>
+        <form method="post" action="/" class="bg-white p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="query">Query</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="query" name="query">
             </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="court_name">Court Name</label>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="court_name" name="court_name">
+                    <option value="">Select Court</option>
+                    {% for court in courts %}
+                        <option value="{{ court }}">{{ court }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="verdict">Verdict</label>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="verdict" name="verdict">
+                    <option value="">Select Verdict</option>
+                    {% for verdict in verdicts %}
+                        <option value="{{ verdict }}">{{ verdict }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Search
+                </button>
+            </div>
         </form>
-        {% if error %}
-            <div class="alert alert-danger mt-3">{{ error }}</div>
-        {% endif %}
     </div>
 </body>
 </html>

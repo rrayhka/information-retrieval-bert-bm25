@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 from tqdm.notebook import tqdm
 from rank_bm25 import BM25Okapi
-from transformers import BertTokenizer, BertModel
+from transformers import BertTokenizer, BertModel, AutoModel
 data = open('data/json/all.json').read()
 list_data = data.split('\n')
 dicts = []
@@ -41,8 +41,8 @@ def extract_entities(text, tags):
         entities.append(' '.join(current_entity))
     return entities
 df['entities'] = df.apply(lambda row: extract_entities(row['text'], row['text-tags']), axis=1)
-tokenizer = BertTokenizer.from_pretrained('indobert-base-p1')
-model = BertModel.from_pretrained('indobert-base-p1')
+tokenizer = BertTokenizer.from_pretrained("indobenchmark/indobert-base-p1")
+model = AutoModel.from_pretrained("indobenchmark/indobert-base-p1")
 def bert_encode(texts, batch_size=32, max_length=512):
     embeddings = []
     for i in tqdm(range(0, len(texts), batch_size)):
